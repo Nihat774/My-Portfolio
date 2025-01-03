@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const NotFoundPage = () => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 text-center">
+    <section className="flex flex-col items-center justify-center min-h-screen bg-gray-100 text-center">
       {/* Animation for page content */}
       <motion.div 
         initial={{ opacity: 0 }} 
@@ -25,7 +25,7 @@ const NotFoundPage = () => {
           </Link>
         </div>
       </motion.div>     
-    </div>
+    </section>
   );
 };
 

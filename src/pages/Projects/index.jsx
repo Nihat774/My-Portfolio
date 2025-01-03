@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
-
+import { Link, useLocation } from "react-router-dom";
 const ProjectsPage = () => {
+  const loc = useLocation();
   return (
     <motion.div
       className="min-h-screen flex flex-col items-center justify-center px-4 py-8"
@@ -17,7 +17,7 @@ const ProjectsPage = () => {
       >
         My Projects
       </motion.h2>
-      
+
       <motion.div
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8"
         initial={{ opacity: 0 }} // Başlanğıcda şəffaf
@@ -39,14 +39,14 @@ const ProjectsPage = () => {
             Console Game
           </motion.h3>
           <motion.p
-            className="mb-4"
+            className="mb-4 h-12 "
             initial={{ y: 20, opacity: 0 }} // Başlanğıcda aşağıda və şəffaf
             animate={{ y: 0, opacity: 1 }} // Sıfırlandıqda görünür
             transition={{ duration: 0.5, delay: 0.3 }}
           >
             A fun console-based game, built using JavaScript.
           </motion.p>
-          <motion.Link
+          <Link
             to="https://consolegame.vercel.app"
             target="_blank"
             rel="noopener noreferrer"
@@ -55,8 +55,8 @@ const ProjectsPage = () => {
             animate={{ y: 0, opacity: 1 }} // Sıfırlandıqda görünür
             transition={{ duration: 0.5, delay: 0.6 }}
           >
-            Visit Project
-          </motion.Link>
+            Sayta keçid
+          </Link>
         </motion.div>
 
         {/* Project 2 */}
@@ -74,14 +74,14 @@ const ProjectsPage = () => {
             BDA Project
           </motion.h3>
           <motion.p
-            className="mb-4"
+            className="mb-4 h-12 flex items-center"
             initial={{ y: 20, opacity: 0 }} // Başlanğıcda aşağıda və şəffaf
             animate={{ y: 0, opacity: 1 }} // Sıfırlandıqda görünür
             transition={{ duration: 0.5, delay: 0.3 }}
           >
-            A project built to demonstrate database integration and front-end skills.
+           Website built for an education company.
           </motion.p>
-          <motion.Link
+          <Link
             to="https://BDA-project.netlify.app"
             target="_blank"
             rel="noopener noreferrer"
@@ -90,8 +90,8 @@ const ProjectsPage = () => {
             animate={{ y: 0, opacity: 1 }} // Sıfırlandıqda görünür
             transition={{ duration: 0.5, delay: 0.6 }}
           >
-            Visit Project
-          </motion.Link>
+            Sayta keçid
+          </Link>
         </motion.div>
 
         {/* Add more projects here */}

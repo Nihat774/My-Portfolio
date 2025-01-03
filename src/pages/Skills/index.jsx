@@ -1,7 +1,15 @@
 import React from "react";
-import { motion } from "framer-motion"; // Framer Motion'u import et
-import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaSass, FaBootstrap, FaGithub } from "react-icons/fa";
-import { SiTailwindcss, SiTypescript } from "react-icons/si";
+import { motion } from "framer-motion";
+import {
+  FaBootstrap,
+  FaCss3Alt,
+  FaGithub,
+  FaHtml5,
+  FaJsSquare,
+  FaReact,
+  FaSass,
+} from "react-icons/fa";
+import { SiTailwindcss, SiTypescript, SiRedux } from "react-icons/si";
 
 const skillsData = [
   { name: "HTML5", icon: <FaHtml5 className="text-orange-500" />, description: "Structure of the web." },
@@ -12,6 +20,7 @@ const skillsData = [
   { name: "TypeScript", icon: <SiTypescript className="text-blue-600" />, description: "Typed superset of JS." },
   { name: "Bootstrap", icon: <FaBootstrap className="text-purple-600" />, description: "Responsive CSS framework." },
   { name: "Sass", icon: <FaSass className="text-pink-400" />, description: "CSS preprocessor for flexibility." },
+  { name: "Redux Toolkit", icon: <SiRedux className="text-purple-500" />, description: "State management for modern apps." },
   { name: "GitHub", icon: <FaGithub className="text-gray-800" />, description: "Version control & collaboration." },
 ];
 
@@ -19,32 +28,33 @@ const Skills = () => {
   return (
     <motion.div
       className="min-h-screen bg-gradient-to-br from-gray-100 to-gray-200 py-12"
-      initial={{ opacity: 0 }} // Başlangıçda görünməz
-      animate={{ opacity: 1 }} // Görünür olma
-      transition={{ duration: 1 }} // 1 saniyə ərzində
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
     >
       <div className="w-11/12 max-w-5xl mx-auto">
         <motion.h1
           className="text-3xl sm:text-4xl md:text-5xl font-semibold text-center text-gray-800 mb-12"
-          initial={{ y: -100, opacity: 0 }} // Başlangıçda yuxarıda və şəffaf
-          animate={{ y: 0, opacity: 1 }} // Sıfırlandıqda görünür
+          initial={{ y: -100, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1 }}
         >
           My Skills
         </motion.h1>
         <motion.div
           className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6"
-          initial={{ opacity: 0 }} // Başlangıçda şəffaf
-          animate={{ opacity: 1 }} // Görünməz olmaqdan görmək
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
         >
           {skillsData.map((skill, index) => (
             <motion.div
               key={index}
-              className="p-6 bg-white shadow-lg rounded-lg flex flex-col items-center"
-              initial={{ y: 50, opacity: 0 }} // Başlangıçda yuxarıda və şəffaf
-              animate={{ y: 0, opacity: 1 }} // Görünür olma
-              transition={{ duration: 0.8, delay: index * 0.2 }} // Hər bir elementin görünməsinə gecikmə
+              className="p-6 bg-white shadow-lg rounded-lg flex flex-col items-center cursor-pointer"
+              initial={{ y: 50, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.3 }}
             >
               <div className="text-5xl">{skill.icon}</div>
               <h2 className="mt-4 text-xl font-semibold text-gray-700">

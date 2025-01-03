@@ -1,14 +1,15 @@
 import React from "react";
-import { useForm, ValidationError } from "@formspree/react";
+import { useForm } from "@formspree/react";
 import { motion } from "framer-motion"; // Framer Motion-u import edin
+import { Link } from "react-router-dom";
 
 function ContactForm() {
   const [state, handleSubmit] = useForm("mdkkpajn");
 
   if (state.succeeded) {
     return (
-      <div className="flex items-center justify-center bg-gray-100">
-        <motion.div 
+      <section className="flex items-center justify-center bg-gray-100">
+        <motion.div
           className="text-center"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -17,19 +18,19 @@ function ContactForm() {
           <p className="text-green-500 font-semibold text-xl mb-4">
             Thanks for your message!
           </p>
-          <button
+          <Link
+            to="/"
             className="bg-blue-600 text-white py-2 px-6 rounded-md hover:bg-blue-700 transition duration-300"
-            onClick={() => (window.location.href = "/")}
           >
             Back to Home
-          </button>
+          </Link>
         </motion.div>
-      </div>
+      </section>
     );
   }
 
   return (
-    <div className="py-5 bg-gray-100 flex items-center justify-center">
+    <section className="py-5 bg-gray-100 flex items-center justify-center">
       <motion.div
         className="w-11/12 max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-8 bg-white shadow-lg rounded-2xl overflow-hidden"
         initial={{ opacity: 0 }}
@@ -56,12 +57,6 @@ function ContactForm() {
                 placeholder="Email"
                 className="w-full mt-2 p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none"
               />
-              <ValidationError
-                prefix="Email"
-                field="email"
-                errors={state.errors}
-                className="text-red-500 text-sm mt-1"
-              />
             </div>
 
             <div>
@@ -78,12 +73,12 @@ function ContactForm() {
                 rows="5"
                 placeholder="Write your message here..."
               />
-              <ValidationError
+              {/* <ValidationError
                 prefix="Message"
                 field="message"
                 errors={state.errors}
                 className="text-red-500 text-sm mt-1"
-              />
+              /> */}
             </div>
 
             <button
@@ -112,21 +107,18 @@ function ContactForm() {
           <div className="flex flex-col gap-4">
             <div>
               <p className="font-semibold text-gray-800">Phone</p>
-              <a
-                href="tel:+994557748548"
-                className=" hover:text-blue-700"
-              >
+              <Link to="tel:+994557748548" className=" hover:text-blue-700">
                 +994 55 774 85 48
-              </a>
+              </Link>
             </div>
             <div>
               <p className="font-semibold text-gray-800">Email</p>
-              <a
-                href="mailto:nihatmemmedov.0520@gmail.com"
+              <Link
+                to="mailto:nihatmemmedov.0520@gmail.com"
                 className=" hover:text-blue-700"
               >
                 nihatmemmedov.0520@gmail.com
-              </a>
+              </Link>
             </div>
             <div>
               <p className="font-semibold text-gray-800">Address</p>
@@ -135,7 +127,7 @@ function ContactForm() {
           </div>
         </motion.div>
       </motion.div>
-    </div>
+    </section>
   );
 }
 

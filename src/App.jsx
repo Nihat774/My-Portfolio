@@ -1,6 +1,7 @@
-import MyRoute from "./config/MyRoute"
-import LayoutComponent from "./Layout/LayoutComponent"
-import "./index.css"
+import MyRoute from "./config/MyRoute";
+import LayoutComponent from "./Layout/LayoutComponent";
+import "./index.css";
+
 function App() {
   return (
     <>
@@ -8,7 +9,7 @@ function App() {
         <MyRoute />
       </LayoutComponent>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
