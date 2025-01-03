@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../Header";
 import Footer from "../Footer";
-import ScrollTop from "../../../TopScroll";
+import ScrollTop from "../../TopScroll";
 import { Helmet } from "react-helmet";
 
 function LayoutComponent({ children }) {
