@@ -36,6 +36,10 @@ function ContactForm() {
 
   return (
     <section className="py-5 bg-gray-100 flex items-center justify-center">
+      <Helmet>
+        <title>My Contact</title>
+        <meta name="description" content="This is my contact page" />
+      </Helmet>
       <motion.div
         className="w-11/12 max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-8 bg-white shadow-lg rounded-2xl overflow-hidden"
         initial={{ opacity: 0 }}
