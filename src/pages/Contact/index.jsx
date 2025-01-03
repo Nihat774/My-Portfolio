@@ -2,6 +2,7 @@ import React from "react";
 import { useForm } from "@formspree/react";
 import { motion } from "framer-motion"; // Framer Motion-u import edin
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 function ContactForm() {
   const [state, handleSubmit] = useForm("mdkkpajn");
@@ -9,6 +10,10 @@ function ContactForm() {
   if (state.succeeded) {
     return (
       <section className="flex items-center justify-center bg-gray-100">
+        <Helmet>
+          <title>My Contact</title>
+          <meta name="description" content="This is my contact page" />
+        </Helmet>
         <motion.div
           className="text-center"
           initial={{ opacity: 0 }}

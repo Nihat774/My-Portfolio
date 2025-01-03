@@ -10,18 +10,59 @@ import {
   FaSass,
 } from "react-icons/fa";
 import { SiTailwindcss, SiTypescript, SiRedux } from "react-icons/si";
+import { Helmet } from "react-helmet";
 
 const skillsData = [
-  { name: "HTML5", icon: <FaHtml5 className="text-orange-500" />, description: "Structure of the web." },
-  { name: "CSS3", icon: <FaCss3Alt className="text-blue-500" />, description: "Styling and layouts." },
-  { name: "Tailwind", icon: <SiTailwindcss className="text-teal-500" />, description: "Utility-first CSS framework." },
-  { name: "JavaScript", icon: <FaJsSquare className="text-yellow-500" />, description: "Interactive web development." },
-  { name: "React.js", icon: <FaReact className="text-blue-400" />, description: "Modern UI library." },
-  { name: "TypeScript", icon: <SiTypescript className="text-blue-600" />, description: "Typed superset of JS." },
-  { name: "Bootstrap", icon: <FaBootstrap className="text-purple-600" />, description: "Responsive CSS framework." },
-  { name: "Sass", icon: <FaSass className="text-pink-400" />, description: "CSS preprocessor for flexibility." },
-  { name: "Redux Toolkit", icon: <SiRedux className="text-purple-500" />, description: "State management for modern apps." },
-  { name: "GitHub", icon: <FaGithub className="text-gray-800" />, description: "Version control & collaboration." },
+  {
+    name: "HTML5",
+    icon: <FaHtml5 className="text-orange-500" />,
+    description: "Structure of the web.",
+  },
+  {
+    name: "CSS3",
+    icon: <FaCss3Alt className="text-blue-500" />,
+    description: "Styling and layouts.",
+  },
+  {
+    name: "Tailwind",
+    icon: <SiTailwindcss className="text-teal-500" />,
+    description: "Utility-first CSS framework.",
+  },
+  {
+    name: "JavaScript",
+    icon: <FaJsSquare className="text-yellow-500" />,
+    description: "Interactive web development.",
+  },
+  {
+    name: "React.js",
+    icon: <FaReact className="text-blue-400" />,
+    description: "Modern UI library.",
+  },
+  {
+    name: "TypeScript",
+    icon: <SiTypescript className="text-blue-600" />,
+    description: "Typed superset of JS.",
+  },
+  {
+    name: "Bootstrap",
+    icon: <FaBootstrap className="text-purple-600" />,
+    description: "Responsive CSS framework.",
+  },
+  {
+    name: "Sass",
+    icon: <FaSass className="text-pink-400" />,
+    description: "CSS preprocessor for flexibility.",
+  },
+  {
+    name: "Redux Toolkit",
+    icon: <SiRedux className="text-purple-500" />,
+    description: "State management for modern apps.",
+  },
+  {
+    name: "GitHub",
+    icon: <FaGithub className="text-gray-800" />,
+    description: "Version control & collaboration.",
+  },
 ];
 
 const Skills = () => {
@@ -32,6 +73,10 @@ const Skills = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >
+      <Helmet>
+        <title>My Skills</title>
+        <meta name="description" content="This is my skills page" />
+      </Helmet>
       <div className="w-11/12 max-w-5xl mx-auto">
         <motion.h1
           className="text-3xl sm:text-4xl md:text-5xl font-semibold text-center text-gray-800 mb-12"

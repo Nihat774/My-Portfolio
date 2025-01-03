@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 import { useNavigate } from "react-router-dom";
 
 const HomePage = () => {
@@ -32,6 +33,10 @@ const HomePage = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen px-4">
       {/* "I'm Nihat" text */}
+      <Helmet>
+        <title>My home page</title>
+        <meta name="description" content="This is my main page" />
+      </Helmet>
       <h2 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-gray-800 mb-6 text-center">
         I'm Nihat.
       </h2>

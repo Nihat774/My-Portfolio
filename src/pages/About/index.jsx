@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const AboutPage = () => {
   const navigate = useNavigate();
@@ -11,6 +12,10 @@ const AboutPage = () => {
       animate={{ opacity: 1 }} // Görünür olma
       transition={{ duration: 1 }} // 1 saniyə ərzində
     >
+      <Helmet>
+        <title>My About</title>
+        <meta name="description" content="This is my about page" />
+      </Helmet>
       <section className="container mx-auto flex flex-col md:flex-row items-center p-8 space-y-8 md:space-y-0">
         {/* Sol tərəfdəki mətn */}
         <motion.div

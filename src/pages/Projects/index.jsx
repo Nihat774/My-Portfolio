@@ -1,14 +1,20 @@
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet";
 import { Link, useLocation } from "react-router-dom";
 const ProjectsPage = () => {
   const loc = useLocation();
   return (
+    
     <motion.div
       className="min-h-screen flex flex-col items-center justify-center px-4 py-8"
       initial={{ opacity: 0 }} // Başlanğıcda şəffaf
       animate={{ opacity: 1 }} // Görünür olma
       transition={{ duration: 1 }} // 1 saniyə ərzində
     >
+      <Helmet>
+        <title>My Projects</title>
+        <meta name="description" content="This is my projects page" />
+      </Helmet>
       <motion.h2
         className="text-4xl md:text-5xl font-bold mb-8"
         initial={{ y: -100, opacity: 0 }} // Başlanğıcda yuxarıda və şəffaf
