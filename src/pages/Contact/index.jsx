@@ -3,26 +3,32 @@ import { useForm } from "@formspree/react";
 import { motion } from "framer-motion"; // Framer Motion-u import edin
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
+import { LuAlarmClockCheck } from "react-icons/lu";
 
 function ContactForm() {
   const [state, handleSubmit] = useForm("mdkkpajn");
 
   if (state.succeeded) {
     return (
-      <section className="flex items-center justify-center bg-gray-100">
+      <section className="flex items-center min-h-screen justify-center bg-gray-100">
         <Helmet>
           <title>My Contact</title>
           <meta name="description" content="This is my contact page" />
         </Helmet>
         <motion.div
-          className="text-center"
+          className="text-center flex flex-col gap-5"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }} // Hərəkətin sürəti
         >
-          <p className="text-green-500 font-semibold text-xl mb-4">
+          
+          <p className="text-[6rem] flex justify-center text-blue-600"><LuAlarmClockCheck /></p>
+       <div className="flex flex-col ">
+       <p className="text-green-500 font-semibold text-2xl mb-4">
             Thanks for your message!
           </p>
+          <p className="text-green-500 font-semibold text-2xl mb-4">I will contact you soon.</p>
+       </div>
           <Link
             to="/"
             className="bg-blue-600 text-white py-2 px-6 rounded-md hover:bg-blue-700 transition duration-300"
