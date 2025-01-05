@@ -5,11 +5,13 @@ import ScrollTop from "../../TopScroll";
 function LayoutComponent({ children }) {
   return (
     <>
-      <Header />
+      <div className="min-h-screen">
+        <Header />
 
-      <ScrollTop />
-      {children}
-      <Footer />
+        <ScrollTop />
+        {children}
+        <Footer />
+      </div>
     </>
   );
 }

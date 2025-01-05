@@ -8,10 +8,10 @@ const Header = () => {
   
   return (
     <>
-      <header className="bg-gray-800 shadow-md text-white sticky top-0 z-10">
+      <header className="bg-gray-800 h-[15%] shadow-md text-white sticky top-0 z-10">
         <div className="max-w-7xl mx-auto px-4 py-6 flex justify-between items-center">
           {/* Bəzəkli Logo: NM */}
-          <Link to="/" className="text-3xl flex font-semibold hover:text-white">
+          <Link to="/" className="text-3xl flex font-semibold  hover:text-indigo-600">
             <span className="text-5xl font-extrabold text-gradient bg-clip-text">N</span>
             <span className="text-3xl pt-5 font-bold text-gradient bg-clip-text">m</span>
           </Link>

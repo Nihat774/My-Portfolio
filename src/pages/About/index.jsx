@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
-
+// import {personalImage1} from "/images/personalİmage1.jpg"
 const AboutPage = () => {
   const navigate = useNavigate();
   return (
@@ -38,18 +38,17 @@ const AboutPage = () => {
             animate={{ y: 0, opacity: 1 }} // Sıfırlandıqda görünür
             transition={{ duration: 0.5, delay: 0.3 }}
           >
-            I’m Nihat, a dedicated Front-end Developer driven by the passion to
-            craft visually appealing and user-centric websites. With expertise
-            in HTML, CSS, JavaScript, React, and modern web technologies, I aim
-            to build efficient, high-quality solutions that enhance user
-            experiences.
+            I am Nihat. I am 19 years old. I develop various websites using
+            HTML, CSS, JavaScript, React technologies as requested. I pay
+            attention to the speed and performance of the websites I develop. I
+            am able to work with groups. I have group management skills.
           </motion.p>
-          <section className="flex justify-between items-center">
+          <section className="flex md:flex-row flex-col md:gap-0 gap-5 justify-between items-center">
             <div className="flex flex-col justify-center">
               <motion.a
                 download
                 href="/Nihat Məmmədov CV(2).docx"
-                className="px-8 py-3 border-green-600 bg-green-600 text-lg font-medium rounded-lg shadow-lg hover:bg-green-500 hover:shadow-xl transition-all duration-300 ease-in-out"
+                className="text-white px-8 py-3 border-green-600 bg-green-600 text-lg font-medium rounded-lg shadow-lg hover:bg-green-500 hover:shadow-xl transition-all duration-300 ease-in-out"
                 initial={{ scale: 0.8, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.6 }}
@@ -77,10 +76,10 @@ const AboutPage = () => {
           transition={{ duration: 0.8 }}
         >
           <img
-            src="https://via.placeholder.com/350"
+            src="/images/personalİmage1.jpg"
             alt="Profile"
             loading="lazy"
-            className="w-96 h-96 rounded-[20px] border-4 border-indigo-600 shadow-lg"
+            className="w-96 h-96 rounded-[20px] border-4 border-indigo-600 shadow-lg object-cover"
           />
         </motion.div>
       </section>

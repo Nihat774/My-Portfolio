@@ -3,10 +3,10 @@ import { Helmet } from "react-helmet";
 import { useNavigate } from "react-router-dom";
 
 const HomePage = () => {
-  const fullText = "Front-end Developer";
+  const fullText = "Front-end Developer.";
   const [displayText, setDisplayText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
-  const [speed, setSpeed] = useState(150);
+  const [speed, setSpeed] = useState(170);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -31,7 +31,7 @@ const HomePage = () => {
   }, [displayText, isDeleting, speed]);
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen px-4">
+    <div className="flex flex-col items-center justify-center h-[80vh] md:min-h-screen px-4">
       {/* "I'm Nihat" text */}
       <Helmet>
         <title>My home page</title>
