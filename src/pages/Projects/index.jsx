@@ -79,39 +79,7 @@ const ProjectsPage = () => {
             )
           })
         }
-        <motion.div
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className="bg-white shadow-lg rounded-lg p-7 transition-all duration-300 ease-in-out w-full md:w-80 lg:w-96"
-        >
-          <motion.h3
-            className="text-2xl font-semibold mb-4"
-            initial={{ y: -50, opacity: 0 }} // Başlanğıcda yuxarıda və şəffaf
-            animate={{ y: 0, opacity: 1 }} // Sıfırlandıqda görünür
-            transition={{ duration: 0.5 }}
-          >
-            Console Game
-          </motion.h3>
-          <motion.p
-            className="mb-4 h-12 "
-            initial={{ y: 20, opacity: 0 }} // Başlanğıcda aşağıda və şəffaf
-            animate={{ y: 0, opacity: 1 }} // Sıfırlandıqda görünür
-            transition={{ duration: 0.5, delay: 0.3 }}
-          >
-            A fun console-based game, built using JavaScript.
-          </motion.p>
-          <Link
-            to="https://consolegame.vercel.app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-xl hover:underline"
-            initial={{ y: 20, opacity: 0 }} // Başlanğıcda aşağıda və şəffaf
-            animate={{ y: 0, opacity: 1 }} // Sıfırlandıqda görünür
-            transition={{ duration: 0.5, delay: 0.6 }}
-          >
-            Sayta keçid
-          </Link>
-        </motion.div>
+ 
 
       
       </motion.div>
