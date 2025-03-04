@@ -52,14 +52,14 @@ function AdminPage() {
     <>
       {isOpen ? (
         <>
-          <div className="h-[90vh] flex flex-col justify-center items-center absolute top-[20px] right-[20px] md:top-[3%] md:right-[25%] z-10">
-            <div className="flex justify-end w-[60vw] md:w-[50vw]">
+          <div className="h-[90vh] flex flex-col justify-center items-center absolute top-[20px] right-[30px] md:top-[3%] md:right-[25%] z-10">
+            <div className="flex justify-end w-[80vw] md:w-[50vw]">
               <IoCloseSharp
                 className="border border-black text-black text-xl cursor-pointer"
                 onClick={() => setIsOpen(false)}
               />
             </div>
-            <div className="h-[30vh] w-[60vw] md:h-[50vh] md:w-[50vw] bg-green-600 flex items-center justify-center text-white text-2xl rounded-b-lg rounded-l-lg">
+            <div className="h-[30vh] w-[80vw] md:h-[50vh] md:w-[50vw] bg-green-600 flex items-center justify-center text-white text-2xl rounded-b-lg rounded-l-lg">
               <p className=" text-center">Xoş gəldin Nihat Abdullah!</p>
             </div>
           </div>
@@ -79,7 +79,7 @@ function AdminPage() {
               onChange={(e) => handleChange(e)}
               type="text"
               placeholder="Layihənin adı"
-              className="inputsStill w-full md:w-[40vw]"
+              className="inputsStill w-[80vw] md:w-[40vw]"
             />
             <input
               required
@@ -87,7 +87,7 @@ function AdminPage() {
               value={newData.projectAbout}
               type="text"
               placeholder="Layihə haqqında"
-              className="inputsStill w-full md:w-[40vw]"
+              className="inputsStill w-[80vw] md:w-[40vw]"
               onChange={(e) => handleChange(e)}
             />
             <input
@@ -96,7 +96,7 @@ function AdminPage() {
               name="projectLink"
               type="text"
               placeholder="Layihənin linki"
-              className="inputsStill w-full md:w-[40vw]"
+              className="inputsStill w-[80vw] md:w-[40vw]"
               onChange={(e) => handleChange(e)}
             />
           </div>
