@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 // import {personalImage1} from "/images/personalİmage1.jpg"
 const AboutPage = () => {
   const navigate = useNavigate();

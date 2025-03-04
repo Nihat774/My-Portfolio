@@ -1,0 +1,53 @@
+{
+  "admin": [
+    {
+      "id": 1,
+      "username": "NihatAbdullah",
+      "password": "Abdullah5712005"
+    }
+  ],
+  "projects": [
+    {
+      "id": "1",
+      "projectImage": "",
+      "projectName": "Console Game",
+      "projectAbout": "A fun console-based game, built using JavaScript.",
+      "projectLink": "https://consolegame.vercel.app"
+    },
+    {
+      "id": "46f9",
+      "projectImage": "",
+      "projectName": "Kombi Servis",
+      "projectAbout": "Website designed for Kombi Service.",
+      "projectLink": "https://www.kombiustasixirdalan.az/"
+    },
+    {
+      "id": "d37f",
+      "projectImage": "",
+      "projectName": "CodExpert Agency",
+      "projectAbout": "Website to get information about the agency and join trainings",
+      "projectLink": "https://codexpert-project.netlify.app/"
+    },
+    {
+      "id": "cce6",
+      "projectImage": "",
+      "projectName": "BDA Academy",
+      "projectAbout": "This is Education Website",
+      "projectLink": "https://bdacademy.az/"
+    },
+    {
+      "id": "04f6",
+      "projectImage": "",
+      "projectName": "Moviewind",
+      "projectAbout": "This is movie website",
+      "projectLink": "movie-site-pink.vercel.app"
+    },
+    {
+      "id": "c0ca",
+      "projectImage": "",
+      "projectName": "Portfolio",
+      "projectAbout": "This is portfolio website",
+      "projectLink": "intern-intelligence-2.vercel.app"
+    }
+  ]
+}

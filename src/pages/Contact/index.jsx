@@ -2,7 +2,7 @@ import React from "react";
 import { useForm } from "@formspree/react";
 import { motion } from "framer-motion"; // Framer Motion-u import edin
 import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import { LuAlarmClockCheck } from "react-icons/lu";
 
 function ContactForm() {
@@ -10,7 +10,7 @@ function ContactForm() {
 
   if (state.succeeded) {
     return (
-      <section className="flex items-center min-h-screen justify-center bg-gray-100">
+      <section className="flex items-center flex-1 justify-center bg-gray-100">
         <Helmet>
           <title>My Contact</title>
           <meta name="description" content="This is my contact page" />
@@ -41,19 +41,19 @@ function ContactForm() {
   }
 
   return (
-    <section className="py-5 bg-gray-100 flex items-center justify-center">
+    <section className=" bg-gray-100 flex items-center justify-center flex-[5]">
       <Helmet>
         <title>My Contact</title>
         <meta name="description" content="This is my contact page" />
       </Helmet>
       <motion.div
-        className="w-11/12 max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-8 bg-white shadow-lg rounded-2xl overflow-hidden"
+        className="w-11/12 max-w-5xl grid grid-cols-1  md:grid-cols-2 gap-8 bg-white shadow-lg rounded-2xl overflow-hidden"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }} // Animasiya müddəti
       >
         {/* Form Section */}
-        <div className="p-6 sm:p-8">
+        <div className="p-6 sm:p-8 ">
           <h2 className="text-2xl font-semibold text-gray-800 mb-6">
             Contact Me
           </h2>
@@ -66,6 +66,7 @@ function ContactForm() {
                 Email Address
               </label>
               <input
+              required
                 id="email"
                 type="email"
                 name="email"
@@ -82,9 +83,10 @@ function ContactForm() {
                 Message
               </label>
               <textarea
+              required
                 id="message"
                 name="message"
-                className="w-full mt-2 p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                className="resize-none w-full mt-2 p-4 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none"
                 rows="5"
                 placeholder="Write your message here..."
               />
@@ -111,7 +113,7 @@ function ContactForm() {
           className="bg-gradient-to-br from-blue-100 to-purple-100 p-6 sm:p-8 flex flex-col justify-center"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1 }} // Animasiya müddəti
+          transition={{ duration: 1 }} 
         >
           <h2 className="text-xl font-semibold text-gray-800 mb-4">
             Contact Information

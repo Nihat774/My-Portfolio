@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
-import { Helmet } from "react-helmet";
 import { useNavigate } from "react-router-dom";
-
+import { Helmet } from "react-helmet-async";
 const HomePage = () => {
   const fullText = "Front-end Developer.";
   const [displayText, setDisplayText] = useState("");
@@ -31,7 +30,7 @@ const HomePage = () => {
   }, [displayText, isDeleting, speed]);
 
   return (
-    <div className="flex flex-col items-center justify-center h-[80vh] md:min-h-screen px-4">
+    <div className="flex flex-col items-center justify-center px-4 flex-[14] py-9">
       {/* "I'm Nihat" text */}
       <Helmet>
         <title>My home page</title>

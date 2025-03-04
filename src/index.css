@@ -5,3 +5,9 @@
 body{
     background-color: rgb(233, 227, 227);
 }
+.inputsStill{
+
+    height: 7vh;
+    padding: 12px;
+    border-radius:8px
+}

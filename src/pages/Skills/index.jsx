@@ -10,7 +10,7 @@ import {
   FaSass,
 } from "react-icons/fa";
 import { SiTailwindcss, SiTypescript, SiRedux } from "react-icons/si";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 const skillsData = [
   {
