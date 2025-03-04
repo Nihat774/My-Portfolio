@@ -12,7 +12,6 @@ const ProjectsPage = () => {
     .then((res)=>res.json())
     .then(data=>setData(data))
   },[])
-  console.log(data);
   
   return (
     <motion.div

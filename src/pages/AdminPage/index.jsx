@@ -1,6 +1,6 @@
 import React, {  useState } from "react";
 import { IoCloseSharp } from "react-icons/io5";
-import {SuccessAlert} from "../../components/Alert";
+import {ErrorAlert, SuccessAlert} from "../../components/Alert";
 
 function AdminPage() {
   const [isOpen, setIsOpen] = useState(true);
@@ -32,7 +32,7 @@ function AdminPage() {
       });
 
       if (!response.ok) {
-        console.log("xeta bas verdi");
+        ErrorAlert()
         return;
       }
 
@@ -44,7 +44,7 @@ function AdminPage() {
         projectLink: "",
       });
     } catch (error) {
-      console.log(error);
+      ErrorAlert()
     }
   }
 
@@ -52,7 +52,7 @@ function AdminPage() {
     <>
       {isOpen ? (
         <>
-          <div className="h-[90vh] flex flex-col justify-center items-center absolute top-[3%] right-[25%] z-10">
+          <div className="h-[90vh] flex flex-col justify-center items-center absolute top-[20px] right-[20px] md:top-[3%] md:right-[25%] z-10">
             <div className="flex justify-end w-[60vw] md:w-[50vw]">
               <IoCloseSharp
                 className="border border-black text-black text-xl cursor-pointer"
